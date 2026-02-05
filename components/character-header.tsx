@@ -24,19 +24,19 @@ export function CharacterHeader() {
         </button>
       </div>
 
-      {/* Message Icon with Badge */}
+      {/* Message Icon with Badge - Circle Container */}
       <div className="flex items-center gap-2">
-        <div className="relative">
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="relative w-8 h-8 rounded-full bg-black/40 flex items-center justify-center">
+          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>
-          <span className="absolute -top-1 -right-1 bg-transparent text-white text-[10px] font-bold">3</span>
+          <span className="absolute -top-0.5 -right-0.5 text-white text-[10px] font-bold">3</span>
         </div>
 
-        {/* Menu Button */}
-        <button className="p-1">
+        {/* Menu Button - Pill extending off screen */}
+        <div className="bg-black/40 rounded-l-full pl-2 py-1.5 pr-4 -mr-4">
           <Menu className="w-5 h-5 text-white" />
-        </button>
+        </div>
       </div>
     </div>
   )

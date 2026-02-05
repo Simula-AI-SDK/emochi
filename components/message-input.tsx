@@ -7,6 +7,7 @@ export function MessageInput() {
     <div className="flex items-center gap-2 px-3 py-2">
       {/* Logo Button */}
       <button className="w-10 h-10 rounded-full bg-[#3A3A3A] flex items-center justify-center flex-shrink-0 overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/250.jpg"
           alt="Talkie logo"

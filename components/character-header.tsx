@@ -13,9 +13,9 @@ export function CharacterHeader() {
         </div>
 
         {/* Character Info */}
-        <div className="flex flex-col leading-none">
-          <span className="text-white font-semibold text-[10px] truncate max-w-[80px]">MBTI Career Pe...</span>
-          <span className="text-white/60 text-[8px]">4,682 Connectors</span>
+        <div className="flex flex-col gap-0.5">
+          <span className="text-white font-semibold text-[10px] truncate max-w-[80px] leading-none">MBTI Career Pe...</span>
+          <span className="text-white/60 text-[8px] leading-none">4,682 Connectors</span>
         </div>
 
         {/* AI-generated tag */}

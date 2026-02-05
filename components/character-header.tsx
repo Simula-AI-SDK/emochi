@@ -11,12 +11,12 @@ export function CharacterHeader() {
         <div className="flex items-center gap-1.5 bg-black/40 rounded-full px-1.5 py-1">
           {/* Avatar */}
           <div className="w-6 h-6 rounded-full bg-gray-600 overflow-hidden border border-white/20 flex-shrink-0">
-            <div className="w-full h-full bg-gradient-to-br from-yellow-200 to-yellow-400" />
+            <img src="/images/anna-avatar.jpg" alt="Anna" className="w-full h-full object-cover" />
           </div>
 
           {/* Character Info */}
           <div className="flex flex-col gap-1">
-            <span className="text-white font-semibold text-[10px] truncate max-w-[80px] leading-none">MBTI Career Pe...</span>
+            <span className="text-white font-semibold text-[10px] truncate max-w-[80px] leading-none">Anna</span>
             <span className="text-white/60 text-[8px] leading-none">4,682 Connectors</span>
           </div>
 

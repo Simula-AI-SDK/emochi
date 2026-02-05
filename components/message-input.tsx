@@ -3,15 +3,40 @@
 import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { Mic, Lightbulb, Plus, Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles } from "lucide-react"
+import { MiniGameMenu } from "@simula/ads"
+
+const CHARACTER = {
+  name: "Anna",
+  id: "anna-001",
+  image: "/images/anna-avatar.jpg",
+  description: "A mysterious girl who always seems curious about where you go at night.",
+}
+
+const chaiGameTheme = {
+  backgroundColor: "rgba(41, 37, 36, 0.98)",
+  headerColor: "rgba(28, 25, 23, 0.95)",
+  borderColor: "rgba(63, 63, 70, 0.4)",
+  titleFont: "Geist, system-ui, sans-serif",
+  secondaryFont: "Geist, system-ui, sans-serif",
+  titleFontColor: "#FAFAF9",
+  secondaryFontColor: "#A8A29E",
+  iconCornerRadius: 12,
+}
 
 export function MessageInput() {
   const [showSuggestions, setShowSuggestions] = useState(false)
   const [showShorts, setShowShorts] = useState(false)
+  const [showGames, setShowGames] = useState(false)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  const simulaMessages = [
+    { role: "assistant" as const, content: "I've noticed you slipping away every night around the same time..." },
+    { role: "assistant" as const, content: "Why are you always so mysterious about your work?" },
+  ]
 
   const suggestions = [
     "*walks over quietly* mind if i sit here?",
@@ -41,10 +66,27 @@ export function MessageInput() {
       {/* Shorts Fullscreen Modal - rendered via portal to document.body */}
       {mounted && showShorts && createPortal(<ShortsModal />, document.body)}
 
+      {/* Mini Game Menu */}
+      <MiniGameMenu
+        isOpen={showGames}
+        onClose={() => setShowGames(false)}
+        charName={CHARACTER.name}
+        charID={CHARACTER.id}
+        charImage={CHARACTER.image}
+        charDesc={CHARACTER.description}
+        messages={simulaMessages}
+        maxGamesToShow={6}
+        delegateChar={true}
+        theme={chaiGameTheme}
+      />
+
       <div className="flex flex-col">
         {/* Action Buttons */}
         <div className="flex items-center gap-2 px-3 py-2">
-          <button className="flex-1 flex items-center justify-center gap-2 bg-[#3A3A3A] hover:bg-[#4a4a4a] transition-colors rounded-full px-4 py-2">
+          <button 
+            onClick={() => setShowGames(true)}
+            className="flex-1 flex items-center justify-center gap-2 bg-[#3A3A3A] hover:bg-[#4a4a4a] transition-colors rounded-full px-4 py-2"
+          >
             <Gamepad2 className="w-4 h-4 text-white/70" />
             <span className="text-white text-sm">Play Games</span>
           </button>

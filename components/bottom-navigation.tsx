@@ -7,8 +7,8 @@ export function BottomNavigation() {
     <div className="flex items-center justify-around px-4 py-2 bg-black/50 backdrop-blur-sm">
       {/* Home - Active */}
       <button className="flex flex-col items-center gap-1 min-w-[60px]">
-        <Home className="w-6 h-6 text-[#E8D5B7] fill-[#E8D5B7]" />
-        <span className="text-[#E8D5B7] text-xs font-medium">Home</span>
+        <Home className="w-5 h-5 text-white fill-white" />
+        <span className="text-white text-xs font-medium">Home</span>
       </button>
 
       {/* Inbox */}

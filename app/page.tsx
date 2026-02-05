@@ -1,11 +1,11 @@
 "use client"
 
-import { StatusBar } from "@/components/status-bar"
 import { NavigationTabs } from "@/components/navigation-tabs"
 import { CharacterHeader } from "@/components/character-header"
 import { CharacterContent } from "@/components/character-content"
 import { MessageInput } from "@/components/message-input"
 import { BottomNavigation } from "@/components/bottom-navigation"
+import { StatusBar } from "@/components/status-bar"
 
 export default function TalkieApp() {
   return (
@@ -20,7 +20,6 @@ export default function TalkieApp() {
       <div className="relative z-10 flex flex-col h-screen">
         {/* Fixed Transparent Header */}
         <div className="absolute top-0 left-0 right-0 z-20">
-          <StatusBar />
           <NavigationTabs />
           <CharacterHeader />
         </div>

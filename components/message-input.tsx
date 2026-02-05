@@ -17,7 +17,7 @@ export function MessageInput() {
     <>
       {/* Shorts Fullscreen Modal */}
       {showShorts && (
-        <div className="fixed inset-0 z-50 bg-black p-[15px] flex flex-col">
+        <div className="fixed inset-0 z-[100] bg-black p-[15px] flex flex-col">
           <button 
             onClick={() => setShowShorts(false)}
             className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"

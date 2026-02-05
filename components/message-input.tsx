@@ -9,7 +9,7 @@ export function MessageInput() {
       <button className="w-10 h-10 rounded-full bg-[#3A3A3A] flex items-center justify-center flex-shrink-0 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/250.jpg"
+          src="/images/talkie-logo.jpg"
           alt="Talkie logo"
           className="w-full h-full object-cover grayscale opacity-40 contrast-50"
         />

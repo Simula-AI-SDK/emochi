@@ -34,7 +34,7 @@ export function CharacterHeader() {
         </div>
 
         {/* Menu Button - Pill extending off screen */}
-        <div className="bg-black/40 rounded-l-full pl-2 py-1.5 pr-4 -mr-4">
+        <div className="bg-black/40 rounded-l-full pl-2 py-1.5 pr-5 -mr-5">
           <Menu className="w-5 h-5 text-white" />
         </div>
       </div>

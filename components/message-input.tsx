@@ -48,37 +48,37 @@ export function MessageInput() {
 
       {/* Suggestions Panel */}
       {showSuggestions && (
-        <div className="bg-[#1a1a1a] px-3 py-3">
+        <div className="bg-[#1a1a1a] px-2 py-2">
           {/* Header */}
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-white text-sm font-medium">Chat Inspiration</span>
-            <button className="flex items-center gap-1.5 text-white/70 text-sm">
-              <Settings className="w-4 h-4" />
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-white text-xs font-medium">Chat Inspiration</span>
+            <button className="flex items-center gap-1 text-white/70 text-xs">
+              <Settings className="w-3 h-3" />
               Chat Settings
             </button>
           </div>
 
           {/* Suggestion Cards */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1.5">
             {suggestions.map((suggestion, index) => (
               <button
                 key={index}
-                className="flex items-center gap-3 bg-[#2a2a2a] rounded-xl px-4 py-3 text-left"
+                className="flex items-center gap-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2 text-left"
               >
-                <Pencil className="w-4 h-4 text-white/50 flex-shrink-0" />
-                <div className="w-px h-6 bg-white/20" />
-                <span className="text-white text-sm">{suggestion}</span>
+                <Pencil className="w-3 h-3 text-white/50 flex-shrink-0" />
+                <div className="w-px h-4 bg-white/20" />
+                <span className="text-white text-xs">{suggestion}</span>
               </button>
             ))}
           </div>
 
           {/* Unlock Row */}
-          <div className="flex items-center justify-between mt-3 bg-[#2a2a2a] rounded-xl px-4 py-3">
-            <div className="flex items-center gap-2">
-              <Crown className="w-5 h-5 text-white/50" />
-              <span className="text-white font-medium">Unlock</span>
+          <div className="flex items-center justify-between mt-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2">
+            <div className="flex items-center gap-1.5">
+              <Crown className="w-4 h-4 text-white/50" />
+              <span className="text-white text-xs font-medium">Unlock</span>
             </div>
-            <span className="text-white/30 text-lg font-semibold">Talkie+</span>
+            <span className="text-white/30 text-sm font-semibold">Talkie+</span>
           </div>
         </div>
       )}

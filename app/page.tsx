@@ -25,7 +25,7 @@ export default function TalkieApp() {
         </div>
         
         {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto pt-28">
+        <div className="flex-1 overflow-y-auto pt-28 flex flex-col justify-end">
           <CharacterContent />
         </div>
 

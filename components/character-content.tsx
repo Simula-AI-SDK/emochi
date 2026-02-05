@@ -19,7 +19,7 @@ export function CharacterContent() {
       <div className="bg-black/75 backdrop-blur-sm rounded-2xl p-3 mb-4">
         <p className="text-white text-xs leading-relaxed">
           <span className="font-bold">Intro</span>{" "}
-          I am the MBTI Career Personality Test, your personal career development guide. I specialize in revealing your personality traits through a series of questions, helping you understand yourself bette...
+          {"I've noticed you slipping away every night around the same time. You never tell me where you're going or what you do. It's like you're living a double life..."}
         </p>
       </div>
 
@@ -31,7 +31,7 @@ export function CharacterContent() {
           <span className="text-white text-[10px] font-medium">8"</span>
         </div>
         <p className="text-white text-sm leading-relaxed">
-          I'm the workplace personality detective, so be honest when answering the following questions, and let's begin this journey of self-discovery!
+          {"Why are you always so mysterious about your work? What exactly do you do that you can't tell me about? I'm starting to worry about you..."}
         </p>
       </div>
     </div>

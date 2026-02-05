@@ -1,11 +1,17 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { createPortal } from "react-dom"
 import { Mic, Lightbulb, Plus, Pencil, Settings, Crown, Gamepad2, Play, X } from "lucide-react"
 
 export function MessageInput() {
   const [showSuggestions, setShowSuggestions] = useState(false)
   const [showShorts, setShowShorts] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const suggestions = [
     "*walks over quietly* mind if i sit here?",
@@ -13,25 +19,27 @@ export function MessageInput() {
     "*walks over with tray* mind if i sit here?",
   ]
 
+  const ShortsModal = () => (
+    <div className="fixed inset-0 z-[9999] bg-black p-[15px] flex flex-col">
+      <button 
+        onClick={() => setShowShorts(false)}
+        className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"
+      >
+        <X className="w-5 h-5 text-white" />
+      </button>
+      <iframe
+        src="https://v0-fandom-navigation-recreation.vercel.app/dramas?buddy=cutie-pie"
+        className="w-full h-full rounded-lg"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  )
+
   return (
     <>
-      {/* Shorts Fullscreen Modal */}
-      {showShorts && (
-        <div className="fixed inset-0 z-[100] bg-black p-[15px] flex flex-col">
-          <button 
-            onClick={() => setShowShorts(false)}
-            className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"
-          >
-            <X className="w-5 h-5 text-white" />
-          </button>
-          <iframe
-            src="https://v0-fandom-navigation-recreation.vercel.app/dramas?buddy=cutie-pie"
-            className="w-full h-full rounded-lg"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-      )}
+      {/* Shorts Fullscreen Modal - rendered via portal to document.body */}
+      {mounted && showShorts && createPortal(<ShortsModal />, document.body)}
 
       <div className="flex flex-col">
         {/* Action Buttons */}

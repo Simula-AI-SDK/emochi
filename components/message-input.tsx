@@ -16,11 +16,11 @@ export function MessageInput() {
     <div className="flex flex-col">
       {/* Action Buttons */}
       <div className="flex items-center gap-2 px-3 py-2">
-        <button className="flex items-center gap-1.5 bg-[#3A3A3A] rounded-full px-3 py-1.5">
+        <button className="flex-1 flex items-center justify-center gap-1.5 bg-[#3A3A3A] rounded-full px-3 py-1.5">
           <Gamepad2 className="w-3.5 h-3.5 text-white/70" />
           <span className="text-white text-xs">Play Games</span>
         </button>
-        <button className="flex items-center gap-1.5 bg-[#3A3A3A] rounded-full px-3 py-1.5">
+        <button className="flex-1 flex items-center justify-center gap-1.5 bg-[#3A3A3A] rounded-full px-3 py-1.5">
           <Play className="w-3.5 h-3.5 text-white/70 fill-white/70" />
           <span className="text-white text-xs">Watch Shorts</span>
         </button>

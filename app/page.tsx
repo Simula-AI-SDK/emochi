@@ -17,9 +17,9 @@ export default function TalkieApp() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col h-screen">
+      <div className="relative flex flex-col h-screen">
         {/* Fixed Transparent Header */}
-        <div className="absolute top-0 left-0 right-0 z-20">
+        <div className="absolute top-0 left-0 right-0 z-[50]">
           <NavigationTabs />
           <CharacterHeader />
         </div>

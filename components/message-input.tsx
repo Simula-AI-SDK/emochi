@@ -102,23 +102,23 @@ export function MessageInput() {
             </div>
 
             {/* Suggestion Cards */}
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-2.5">
               {suggestions.slice(0, 2).map((suggestion, index) => (
                 <button
                   key={index}
-                  className="flex items-center gap-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2 text-left"
+                  className="flex items-center gap-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2.5 text-left"
                 >
-                  <Pencil className="w-3 h-3 text-white/50 flex-shrink-0" />
-                  <div className="w-px h-4 bg-white/20" />
-                  <span className="text-white text-xs">{suggestion}</span>
+                  <Pencil className="w-3.5 h-3.5 text-white/50 flex-shrink-0" />
+                  <div className="w-px h-5 bg-white/20" />
+                  <span className="text-white text-sm">{suggestion}</span>
                 </button>
               ))}
               {/* Sponsored Suggestion */}
-              <button className="flex items-center gap-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2 text-left border border-yellow-500/70">
-                <Sparkles className="w-3 h-3 text-yellow-500 flex-shrink-0" />
-                <div className="w-px h-4 bg-yellow-500/40" />
+              <button className="flex items-center gap-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2.5 text-left border border-yellow-500/70">
+                <Sparkles className="w-3.5 h-3.5 text-yellow-500 flex-shrink-0" />
+                <div className="w-px h-5 bg-yellow-500/40" />
                 <div className="flex flex-col">
-                  <span className="text-white text-xs">Explore the DCU on DC Dark Legion</span>
+                  <span className="text-white text-sm">Explore the DCU on DC Dark Legion</span>
                   <span className="text-white/40 text-[10px]">Sponsored</span>
                 </div>
               </button>

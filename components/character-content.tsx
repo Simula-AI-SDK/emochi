@@ -16,8 +16,8 @@ export function CharacterContent() {
       </div>
 
       {/* Intro Card */}
-      <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-4 mb-4">
-        <p className="text-white text-base leading-relaxed">
+      <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-3 mb-4">
+        <p className="text-white text-xs leading-relaxed">
           <span className="font-bold">Intro</span>{" "}
           I am the MBTI Career Personality Test, your personal career development guide. I specialize in revealing your personality traits through a series of questions, helping you understand yourself bette...
         </p>
@@ -35,8 +35,8 @@ export function CharacterContent() {
       </div>
 
       {/* Message Bubble */}
-      <div className="bg-white/90 backdrop-blur-sm rounded-2xl rounded-bl-md p-4 max-w-[85%]">
-        <p className="text-black text-lg leading-relaxed">
+      <div className="bg-black/60 backdrop-blur-sm rounded-2xl rounded-bl-md p-3 max-w-[85%]">
+        <p className="text-white text-sm leading-relaxed">
           I'm the workplace personality detective, so be honest when answering the following questions, and let's begin this journey of self-discovery!
         </p>
       </div>

@@ -10,9 +10,9 @@ import { StatusBar } from "@/components/status-bar"
 export default function TalkieApp() {
   return (
     <div className="relative min-h-screen max-w-[430px] mx-auto bg-black text-white overflow-hidden flex flex-col">
-      {/* Background Image Placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900">
-        <div className="absolute inset-0 bg-[url('/placeholder-bg.jpg')] bg-cover bg-center" />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('/images/character-bg.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80" />
       </div>
 

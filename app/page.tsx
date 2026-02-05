@@ -18,11 +18,15 @@ export default function TalkieApp() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col h-screen">
-        <StatusBar />
-        <NavigationTabs />
-        <CharacterHeader />
+        {/* Fixed Transparent Header */}
+        <div className="absolute top-0 left-0 right-0 z-20">
+          <StatusBar />
+          <NavigationTabs />
+          <CharacterHeader />
+        </div>
         
-        <div className="flex-1 overflow-y-auto">
+        {/* Scrollable Content */}
+        <div className="flex-1 overflow-y-auto pt-28">
           <CharacterContent />
         </div>
 

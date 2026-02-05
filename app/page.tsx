@@ -29,12 +29,17 @@ export default function TalkieApp() {
           <CharacterContent />
         </div>
 
-        <MessageInput />
-        <BottomNavigation />
-        
-        {/* Home Indicator */}
-        <div className="flex justify-center pb-2 pt-1 bg-black/50">
-          <div className="w-32 h-1 bg-white rounded-full" />
+        {/* Bottom Dark Gradient */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
+
+        <div className="relative z-10">
+          <MessageInput />
+          <BottomNavigation />
+          
+          {/* Home Indicator */}
+          <div className="flex justify-center pb-2 pt-1">
+            <div className="w-32 h-1 bg-white rounded-full" />
+          </div>
         </div>
       </div>
     </div>

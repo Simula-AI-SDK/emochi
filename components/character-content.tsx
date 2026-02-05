@@ -6,11 +6,11 @@ export function CharacterContent() {
   return (
     <div className="flex-1 flex flex-col justify-end px-4 pb-4">
       {/* Disclaimer */}
-      <div className="text-center mb-4">
-        <p className="text-white/70 text-sm">
+      <div className="bg-gray-500/40 backdrop-blur-sm rounded-lg px-3 py-2 mb-4 text-center">
+        <p className="text-white/80 text-xs">
           This character is an AI and is not a
         </p>
-        <p className="text-white/70 text-sm">
+        <p className="text-white/80 text-xs">
           licensed health care professional.
         </p>
       </div>

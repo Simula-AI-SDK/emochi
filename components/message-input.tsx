@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Mic, Zap, Plus, Pencil, Settings, Crown } from "lucide-react"
+import { Mic, Lightbulb, Plus, Pencil, Settings, Crown, Zap } from "lucide-react"
 
 export function MessageInput() {
   const [showSuggestions, setShowSuggestions] = useState(false)
@@ -38,7 +38,7 @@ export function MessageInput() {
             className="flex-shrink-0"
             onClick={() => setShowSuggestions(!showSuggestions)}
           >
-            <Zap className={`w-4 h-4 ${showSuggestions ? 'text-yellow-400 fill-yellow-400' : 'text-white/60'}`} />
+            <Lightbulb className={`w-4 h-4 ${showSuggestions ? 'text-yellow-400 fill-yellow-400' : 'text-white/60'}`} />
           </button>
           <button className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
             <Plus className="w-4 h-4 text-white/60" />

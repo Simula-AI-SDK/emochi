@@ -13,13 +13,10 @@ export function CharacterHeader() {
         </div>
 
         {/* Character Info */}
-        <div className="flex flex-col gap-0.5">
+        <div className="flex flex-col gap-1">
           <span className="text-white font-semibold text-[10px] truncate max-w-[80px] leading-none">MBTI Career Pe...</span>
           <span className="text-white/60 text-[8px] leading-none">4,682 Connectors</span>
         </div>
-
-        {/* AI-generated tag */}
-        <span className="text-white/50 text-[8px] px-1">AI-generated</span>
 
         {/* Plus Button */}
         <button className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">

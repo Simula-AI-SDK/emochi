@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
-import { Mic, Lightbulb, Plus, Pencil, Settings, Crown, Gamepad2, Play, X } from "lucide-react"
+import { Mic, Lightbulb, Plus, Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles } from "lucide-react"
 
 export function MessageInput() {
   const [showSuggestions, setShowSuggestions] = useState(false)
@@ -103,7 +103,7 @@ export function MessageInput() {
 
             {/* Suggestion Cards */}
             <div className="flex flex-col gap-1.5">
-              {suggestions.map((suggestion, index) => (
+              {suggestions.slice(0, 2).map((suggestion, index) => (
                 <button
                   key={index}
                   className="flex items-center gap-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2 text-left"
@@ -113,6 +113,15 @@ export function MessageInput() {
                   <span className="text-white text-xs">{suggestion}</span>
                 </button>
               ))}
+              {/* Sponsored Suggestion */}
+              <button className="flex items-center gap-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2 text-left border border-yellow-500/70">
+                <Sparkles className="w-3 h-3 text-yellow-500 flex-shrink-0" />
+                <div className="w-px h-4 bg-yellow-500/40" />
+                <div className="flex flex-col">
+                  <span className="text-white text-xs">Explore the DCU on DC Dark Legion</span>
+                  <span className="text-white/40 text-[10px]">Sponsored</span>
+                </div>
+              </button>
             </div>
 
             {/* Unlock Row */}

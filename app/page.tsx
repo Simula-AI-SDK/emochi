@@ -19,7 +19,7 @@ export default function TalkieApp() {
       {/* Content */}
       <div className="relative flex flex-col h-screen">
         {/* Fixed Transparent Header */}
-        <div className="absolute top-0 left-0 right-0 z-[50]">
+        <div className="absolute top-0 left-0 right-0 z-[5]">
           <NavigationTabs />
           <CharacterHeader />
         </div>
@@ -32,7 +32,7 @@ export default function TalkieApp() {
         {/* Bottom Dark Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
 
-        <div className="relative z-10">
+        <div className="relative z-[5]">
           <MessageInput />
           <BottomNavigation />
           

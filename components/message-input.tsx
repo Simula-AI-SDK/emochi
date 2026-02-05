@@ -29,7 +29,7 @@ export function MessageInput() {
       </button>
       <iframe
         src="https://v0-fandom-navigation-recreation.vercel.app/dramas?buddy=cutie-pie"
-        className="w-full h-full rounded-lg"
+        className="w-full h-full rounded-3xl"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />

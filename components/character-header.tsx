@@ -6,7 +6,7 @@ export function CharacterHeader() {
   return (
     <div className="flex items-center justify-between px-4 py-2">
       {/* Pill Container */}
-      <div className="flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-1.5 py-1">
+      <div className="flex items-center gap-1.5 bg-black/40 rounded-full px-1.5 py-1">
         {/* Avatar */}
         <div className="w-6 h-6 rounded-full bg-gray-600 overflow-hidden border border-white/20 flex-shrink-0">
           <div className="w-full h-full bg-gradient-to-br from-yellow-200 to-yellow-400" />

@@ -53,7 +53,7 @@ export function MessageInput() {
         <X className="w-5 h-5 text-white" />
       </button>
       <iframe
-        src="https://v0-fandom-navigation-recreation.vercel.app/dramas?buddy=sakura"
+        src="https://v0-fandom-navigation-recreation.vercel.app/dramas?buddy=cutie-pie"
         className="w-full h-full rounded-3xl"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

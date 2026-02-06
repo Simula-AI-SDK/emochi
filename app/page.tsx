@@ -2,7 +2,6 @@
 
 import { CharacterContent } from "@/components/character-content"
 import { MessageInput } from "@/components/message-input"
-import { BottomNavigation } from "@/components/bottom-navigation"
 import { StatusBar } from "@/components/status-bar"
 
 export default function TalkieApp() {
@@ -26,12 +25,6 @@ export default function TalkieApp() {
 
         <div className="relative z-[5]">
           <MessageInput />
-          <BottomNavigation />
-          
-          {/* Home Indicator */}
-          <div className="flex justify-center pb-2 pt-1">
-            <div className="w-32 h-1 bg-white rounded-full" />
-          </div>
         </div>
       </div>
     </div>

@@ -5,16 +5,6 @@ import { Play } from "lucide-react"
 export function CharacterContent() {
   return (
     <div className="flex-1 flex flex-col justify-end px-4 pb-4">
-      {/* Disclaimer */}
-      <div className="bg-gray-500/40 backdrop-blur-xl rounded-lg px-3 py-2 mb-4 text-center w-fit mx-auto">
-        <p className="text-white/80 text-xs">
-          This character is an AI and is not a
-        </p>
-        <p className="text-white/80 text-xs">
-          licensed health care professional.
-        </p>
-      </div>
-
       {/* Intro Card */}
       <div className="bg-black/40 backdrop-blur-xl rounded-2xl p-3 mb-4">
         <p className="text-white text-xs leading-relaxed">

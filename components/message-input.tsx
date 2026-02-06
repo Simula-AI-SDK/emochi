@@ -1,8 +1,10 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles, UserPlus, ChevronRight } from "lucide-react"
+import { MiniGameMenu } from "@simula/ads"
+
 const CHARACTER = {
   name: "Anna",
   id: "anna-001",
@@ -64,7 +66,19 @@ export function MessageInput() {
       {/* Shorts Fullscreen Modal - rendered via portal to document.body */}
       {mounted && showShorts && createPortal(<ShortsModal />, document.body)}
 
-      {/* Mini Game Menu placeholder */}
+      {/* Mini Game Menu */}
+      <MiniGameMenu
+        isOpen={showGames}
+        onClose={() => setShowGames(false)}
+        charName={CHARACTER.name}
+        charID={CHARACTER.id}
+        charImage={CHARACTER.image}
+        charDesc={CHARACTER.description}
+        messages={simulaMessages}
+        maxGamesToShow={6}
+        delegateChar={true}
+        theme={chaiGameTheme}
+      />
 
       <div className="flex flex-col">
         {/* Action Buttons */}

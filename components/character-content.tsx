@@ -18,7 +18,7 @@ export function CharacterContent() {
       {/* Intro Card */}
       <div className="bg-black/75 backdrop-blur-sm rounded-2xl p-3 mb-4">
         <p className="text-white text-xs leading-relaxed">
-          <span className="font-bold">Intro</span>{" "}
+          <span className="font-bold">Introduction</span>{" "}
           {"I've noticed you slipping away every night around the same time. You never tell me where you're going or what you do. It's like you're living a double life..."}
         </p>
       </div>

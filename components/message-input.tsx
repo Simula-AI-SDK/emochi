@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
-import { Mic, Lightbulb, Plus, Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles } from "lucide-react"
+import { Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles } from "lucide-react"
 import { MiniGameMenu } from "@simula/ads"
 
 const CHARACTER = {
@@ -101,32 +101,20 @@ export function MessageInput() {
 
         {/* Input Bar */}
         <div className="flex items-center gap-2 px-3 py-2">
-          {/* Logo Button */}
-          <button className="w-10 h-10 rounded-full bg-[#3A3A3A] flex items-center justify-center flex-shrink-0 overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/talkie-logo.jpg"
-              alt="Talkie logo"
-              className="w-full h-full object-cover grayscale opacity-40 contrast-50"
-            />
-          </button>
-
-          {/* Input Field */}
-          <div className="flex-1 bg-[#3A3A3A] rounded-full flex items-center px-3 py-2 gap-2">
-            <Mic className="w-4 h-4 text-white/60 flex-shrink-0" />
+          <div className="flex-1 bg-[#2A2A2A] rounded-full flex items-center px-4 py-2.5 gap-2">
             <input
               type="text"
-              placeholder="Message Anna..."
-              className="flex-1 bg-transparent text-white placeholder-white/50 outline-none text-sm min-w-0"
+              placeholder="Message Anna"
+              className="flex-1 bg-transparent text-white placeholder-white/40 outline-none text-sm min-w-0"
             />
-            <button 
-              className="flex-shrink-0"
-              onClick={() => setShowSuggestions(!showSuggestions)}
-            >
-              <Lightbulb className={`w-4 h-4 ${showSuggestions ? 'text-yellow-400 fill-yellow-400' : 'text-white/60'}`} />
+            <button className="flex-shrink-0">
+              <Sparkles className="w-5 h-5 text-white/40" />
             </button>
-            <button className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-              <Plus className="w-4 h-4 text-white/60" />
+            <button className="flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-white/40">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" fill="currentColor"/>
+                <path d="M12 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.5 8.5c0 2.33 3 3.5 4.5 3.5s4.5-1.17 4.5-3.5H7.5z" fill="currentColor"/>
+              </svg>
             </button>
           </div>
         </div>

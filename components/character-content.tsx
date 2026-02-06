@@ -14,7 +14,7 @@ export function CharacterContent() {
       </div>
 
       {/* Message Bubble with Audio Player */}
-      <div className="relative bg-black/75 backdrop-blur-xl rounded-2xl rounded-bl-md p-3 max-w-[85%]">
+      <div className="relative bg-black/75 backdrop-blur-xl rounded-2xl rounded-bl-md p-3 w-full">
         {/* Floating Audio Player */}
         <div className="absolute -top-3 left-0 bg-[#4a4a4a] backdrop-blur-xl rounded-full px-2 py-1 flex items-center gap-1">
           <Play className="w-2.5 h-2.5 text-white fill-white" />

@@ -20,9 +20,23 @@ export function CharacterContent() {
           <Play className="w-2.5 h-2.5 text-white fill-white" />
           <span className="text-white text-[10px] font-medium">8"</span>
         </div>
-        <p className="text-white text-sm leading-relaxed">
-          {"Why are you always so mysterious about your work? What exactly do you do that you can't tell me about? I'm starting to worry about you..."}
-        </p>
+        <div className="text-sm leading-relaxed space-y-3">
+          <p className="text-white/50 italic">
+            {"You will just wake up on a Saturday, when you enter the bathroom you are faced with the scene of your friend brushing her tooth when she has just woken up, she is exactly as shown in the picture"}
+          </p>
+          <p className="text-white">
+            {"Emilia: bohnm... Dhuia."}
+          </p>
+          <p className="text-white/50 italic">
+            {"She spits out the toothpaste and says it better"}
+          </p>
+          <p className="text-white">
+            {"Emilia: Good morning!."}
+          </p>
+          <p className="text-white/50 italic">
+            {"She then goes back to brushing her teeth as if it were normal for you to share a bathroom"}
+          </p>
+        </div>
       </div>
     </div>
   )

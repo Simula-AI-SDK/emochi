@@ -1,9 +1,14 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles, UserPlus, ChevronRight } from "lucide-react"
-import { MiniGameMenu } from "@simula/ads"
+let MiniGameMenu: React.ComponentType<any> | null = null
+try {
+  MiniGameMenu = require("@simula/ads").MiniGameMenu
+} catch {
+  // Package not available
+}
 
 const CHARACTER = {
   name: "Anna",
@@ -67,18 +72,20 @@ export function MessageInput() {
       {mounted && showShorts && createPortal(<ShortsModal />, document.body)}
 
       {/* Mini Game Menu */}
-      <MiniGameMenu
-        isOpen={showGames}
-        onClose={() => setShowGames(false)}
-        charName={CHARACTER.name}
-        charID={CHARACTER.id}
-        charImage={CHARACTER.image}
-        charDesc={CHARACTER.description}
-        messages={simulaMessages}
-        maxGamesToShow={6}
-        delegateChar={true}
-        theme={chaiGameTheme}
-      />
+      {MiniGameMenu && (
+        <MiniGameMenu
+          isOpen={showGames}
+          onClose={() => setShowGames(false)}
+          charName={CHARACTER.name}
+          charID={CHARACTER.id}
+          charImage={CHARACTER.image}
+          charDesc={CHARACTER.description}
+          messages={simulaMessages}
+          maxGamesToShow={6}
+          delegateChar={true}
+          theme={chaiGameTheme}
+        />
+      )}
 
       <div className="flex flex-col">
         {/* Action Buttons */}

@@ -109,9 +109,8 @@ export function MessageInput() {
             <span className="text-white/40 text-xs">@Ki- kayon</span>
           </div>
           <div className="flex items-center gap-2">
-            <button className="relative w-10 h-10 rounded-xl bg-[#3A3A3A] flex items-center justify-center">
+            <button className="w-10 h-10 rounded-xl bg-[#3A3A3A] flex items-center justify-center">
               <UserPlus className="w-5 h-5 text-white" />
-              <span className="absolute -top-1.5 -right-1.5 bg-yellow-400 text-black text-[10px] font-bold px-1.5 py-0.5 rounded-full">Free</span>
             </button>
             <button className="w-10 h-10 rounded-xl bg-[#3A3A3A] flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">

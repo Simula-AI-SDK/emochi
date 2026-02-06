@@ -64,7 +64,7 @@ export function MessageInput() {
       {/* Shorts Fullscreen Modal - rendered via portal to document.body */}
       {mounted && showShorts && createPortal(<ShortsModal />, document.body)}
 
-      {/* Mini Game Menu - @simula/ads not installed */}
+      {/* Mini Game Menu placeholder */}
 
       <div className="flex flex-col">
         {/* Action Buttons */}

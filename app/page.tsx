@@ -9,7 +9,7 @@ export default function TalkieApp() {
     <div className="relative min-h-screen max-w-[430px] mx-auto bg-black text-white overflow-hidden flex flex-col">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/images/character-bg.jpg')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/images/chat-background.png')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80" />
       </div>
 

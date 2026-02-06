@@ -2,6 +2,7 @@
 
 import { CharacterContent } from "@/components/character-content"
 import { MessageInput } from "@/components/message-input"
+import { StatusBar } from "@/components/status-bar"
 
 export default function TalkieApp() {
   return (

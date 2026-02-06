@@ -1,7 +1,5 @@
 "use client"
 
-import { NavigationTabs } from "@/components/navigation-tabs"
-import { CharacterHeader } from "@/components/character-header"
 import { CharacterContent } from "@/components/character-content"
 import { MessageInput } from "@/components/message-input"
 import { BottomNavigation } from "@/components/bottom-navigation"
@@ -18,14 +16,8 @@ export default function TalkieApp() {
 
       {/* Content */}
       <div className="relative flex flex-col h-screen">
-        {/* Fixed Transparent Header */}
-        <div className="absolute top-0 left-0 right-0 z-[5]">
-          <NavigationTabs />
-          <CharacterHeader />
-        </div>
-        
         {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto pt-28 flex flex-col justify-end">
+        <div className="flex-1 overflow-y-auto flex flex-col justify-end">
           <CharacterContent />
         </div>
 

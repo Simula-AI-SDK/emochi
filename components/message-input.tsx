@@ -3,11 +3,16 @@
 import React, { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles, UserPlus, ChevronRight } from "lucide-react"
-let MiniGameMenu: React.ComponentType<any> | null = null
-try {
-  MiniGameMenu = require("@simula/ads").MiniGameMenu
-} catch {
-  // Package not available
+// MiniGameMenu loaded dynamically to handle missing @simula/ads package
+const MiniGameMenuWrapper = ({ isOpen, onClose, ...props }: any) => {
+  const [Comp, setComp] = React.useState<React.ComponentType<any> | null>(null)
+  React.useEffect(() => {
+    import("@simula/ads")
+      .then((mod) => setComp(() => mod.MiniGameMenu))
+      .catch(() => {})
+  }, [])
+  if (!Comp || !isOpen) return null
+  return <Comp isOpen={isOpen} onClose={onClose} {...props} />
 }
 
 const CHARACTER = {
@@ -72,20 +77,18 @@ export function MessageInput() {
       {mounted && showShorts && createPortal(<ShortsModal />, document.body)}
 
       {/* Mini Game Menu */}
-      {MiniGameMenu && (
-        <MiniGameMenu
-          isOpen={showGames}
-          onClose={() => setShowGames(false)}
-          charName={CHARACTER.name}
-          charID={CHARACTER.id}
-          charImage={CHARACTER.image}
-          charDesc={CHARACTER.description}
-          messages={simulaMessages}
-          maxGamesToShow={6}
-          delegateChar={true}
-          theme={chaiGameTheme}
-        />
-      )}
+      <MiniGameMenuWrapper
+        isOpen={showGames}
+        onClose={() => setShowGames(false)}
+        charName={CHARACTER.name}
+        charID={CHARACTER.id}
+        charImage={CHARACTER.image}
+        charDesc={CHARACTER.description}
+        messages={simulaMessages}
+        maxGamesToShow={6}
+        delegateChar={true}
+        theme={chaiGameTheme}
+      />
 
       <div className="flex flex-col">
         {/* Action Buttons */}

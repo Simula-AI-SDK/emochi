@@ -113,9 +113,9 @@ export function MessageInput() {
               <UserPlus className="w-5 h-5 text-white" />
               <span className="absolute -top-1.5 -right-1.5 bg-yellow-400 text-black text-[10px] font-bold px-1.5 py-0.5 rounded-full">Free</span>
             </button>
-            <button className="w-10 h-10 rounded-xl bg-white flex items-center justify-center">
+            <button className="w-10 h-10 rounded-xl bg-[#3A3A3A] flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4.5 12.5H7.5c0-2.33 3-3.5 4.5-3.5s4.5 1.17 4.5 3.5z" fill="#1a1a1a"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4.5 12.5H7.5c0-2.33 3-3.5 4.5-3.5s4.5 1.17 4.5 3.5z" fill="white"/>
               </svg>
             </button>
           </div>

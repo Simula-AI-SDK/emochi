@@ -1,13 +1,19 @@
 "use client"
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 
-import { SimulaProvider as Provider } from "@simula/ads"
+let Provider: React.ComponentType<{ apiKey: string; children: React.ReactNode }> | null = null
+
+try {
+  Provider = require("@simula/ads").SimulaProvider
+} catch {
+  // Package not available
+}
 
 export function SimulaProvider({ children }: { children: React.ReactNode }) {
   const apiKey = process.env.NEXT_PUBLIC_SIMULA_API_KEY
 
-  if (!apiKey) {
+  if (!apiKey || !Provider) {
     return <>{children}</>
   }
 

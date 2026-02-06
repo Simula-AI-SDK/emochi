@@ -8,7 +8,7 @@ import { MiniGameMenu } from "@simula/ads"
 const CHARACTER = {
   name: "Anna",
   id: "anna-001",
-  image: "/images/character-avatar.png",
+  image: "https://storage.googleapis.com/simula-public/assets/imgs/Screenshot%202026-02-06%20at%2012.13.53%E2%80%AFAM.png",
   description: "A mysterious girl who always seems curious about where you go at night.",
 }
 

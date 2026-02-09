@@ -1,44 +1,56 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { Gamepad2, MessageCircle, Video, ArrowLeft, Swords, Brain, Heart, Puzzle, Dice5, Trophy } from "lucide-react"
+import { Gamepad2, MessageCircle, Video, ArrowLeft, Dice1, Fish, TreePalm, Club, CircleDot, Merge, Dog, ArrowUpDown } from "lucide-react"
 
 const GAMES = [
   {
-    name: "Would You Rather",
-    description: "Make impossible choices together",
-    icon: Dice5,
+    name: "Monopoly Run",
+    description: "Race to build your empire",
+    icon: Dice1,
     color: "#E85D75",
   },
   {
-    name: "Love Quiz",
-    description: "How well do you know each other?",
-    icon: Heart,
-    color: "#E84393",
+    name: "Flappy Fish",
+    description: "Swim through the obstacles",
+    icon: Fish,
+    color: "#0984E3",
   },
   {
-    name: "Word Battle",
-    description: "Challenge each other with words",
-    icon: Swords,
-    color: "#6C5CE7",
-  },
-  {
-    name: "Mind Reader",
-    description: "Guess what the other is thinking",
-    icon: Brain,
+    name: "Apes Tower Defense",
+    description: "Defend your territory from invaders",
+    icon: TreePalm,
     color: "#00B894",
   },
   {
-    name: "Story Builder",
-    description: "Create a story one sentence at a time",
-    icon: Puzzle,
+    name: "Black Jack",
+    description: "Hit or stand to beat the dealer",
+    icon: Club,
+    color: "#2D3436",
+  },
+  {
+    name: "Roulette",
+    description: "Place your bets and spin the wheel",
+    icon: CircleDot,
+    color: "#D63031",
+  },
+  {
+    name: "Merge Mogul",
+    description: "Combine and grow your collection",
+    icon: Merge,
+    color: "#6C5CE7",
+  },
+  {
+    name: "Boop the Snoot",
+    description: "Tap the cute noses for points",
+    icon: Dog,
     color: "#FDCB6E",
   },
   {
-    name: "Trivia Clash",
-    description: "Test your knowledge together",
-    icon: Trophy,
-    color: "#0984E3",
+    name: "Sort Express",
+    description: "Sort items at lightning speed",
+    icon: ArrowUpDown,
+    color: "#E84393",
   },
 ]
 

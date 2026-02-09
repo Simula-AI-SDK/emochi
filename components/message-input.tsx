@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
-import { Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles, UserPlus, ChevronRight } from "lucide-react"
+import { Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles, UserPlus, ChevronRight, MessageCircle } from "lucide-react"
 import { MiniGameMenu } from "@simula/ads"
 
 const CHARACTER = {
@@ -46,7 +46,7 @@ export function MessageInput() {
 
   const ShortsModal = () => (
     <div className="fixed inset-0 z-[9999] bg-black p-[15px] flex flex-col">
-      <button 
+      <button
         onClick={() => setShowShorts(false)}
         className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center"
       >
@@ -63,10 +63,8 @@ export function MessageInput() {
 
   return (
     <>
-      {/* Shorts Fullscreen Modal - rendered via portal to document.body */}
       {mounted && showShorts && createPortal(<ShortsModal />, document.body)}
 
-      {/* Mini Game Menu */}
       <MiniGameMenu
         isOpen={showGames}
         onClose={() => setShowGames(false)}
@@ -81,24 +79,6 @@ export function MessageInput() {
       />
 
       <div className="flex flex-col">
-        {/* Action Buttons */}
-        <div className="flex items-center gap-2 px-3 py-2">
-          <button 
-            onClick={() => setShowGames(true)}
-            className="flex-1 flex items-center justify-center gap-2 bg-[#3A3A3A] hover:bg-[#4a4a4a] transition-colors rounded-full px-4 py-2"
-          >
-            <Gamepad2 className="w-4 h-4 text-white/70" />
-            <span className="text-white text-sm">Play Games</span>
-          </button>
-          <button 
-            onClick={() => setShowShorts(true)}
-            className="flex-1 flex items-center justify-center gap-2 bg-[#3A3A3A] hover:bg-[#4a4a4a] transition-colors rounded-full px-4 py-2"
-          >
-            <Play className="w-4 h-4 text-white/70 fill-white/70" />
-            <span className="text-white text-sm">Watch Shorts</span>
-          </button>
-        </div>
-
         {/* Character Info Row */}
         <div className="flex items-center justify-between px-3 py-2">
           <div className="flex flex-col">
@@ -140,10 +120,31 @@ export function MessageInput() {
           </div>
         </div>
 
+        {/* Footer Navigation */}
+        <div className="flex items-center justify-around px-6 py-3">
+          <button className="flex flex-col items-center gap-1">
+            <MessageCircle className="w-6 h-6 text-white" />
+            <span className="text-white text-[10px]">Chat</span>
+          </button>
+          <button
+            onClick={() => setShowGames(true)}
+            className="flex flex-col items-center gap-1"
+          >
+            <Gamepad2 className="w-6 h-6 text-white/50" />
+            <span className="text-white/50 text-[10px]">Games</span>
+          </button>
+          <button
+            onClick={() => setShowShorts(true)}
+            className="flex flex-col items-center gap-1"
+          >
+            <Play className="w-6 h-6 text-white/50 fill-white/50" />
+            <span className="text-white/50 text-[10px]">Shorts</span>
+          </button>
+        </div>
+
         {/* Suggestions Panel */}
         {showSuggestions && (
           <div className="bg-[#1a1a1a] px-2 py-2">
-            {/* Header */}
             <div className="flex items-center justify-between mb-2">
               <span className="text-white text-xs font-medium">Chat Inspiration</span>
               <button className="flex items-center gap-1 text-white/70 text-xs">
@@ -151,8 +152,6 @@ export function MessageInput() {
                 Chat Settings
               </button>
             </div>
-
-            {/* Suggestion Cards */}
             <div className="flex flex-col gap-2.5">
               {suggestions.slice(0, 2).map((suggestion, index) => (
                 <button
@@ -164,7 +163,6 @@ export function MessageInput() {
                   <span className="text-white text-sm">{suggestion}</span>
                 </button>
               ))}
-              {/* Sponsored Suggestion */}
               <button className="flex items-center gap-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2.5 text-left border border-yellow-500/70">
                 <Sparkles className="w-3.5 h-3.5 text-yellow-500 flex-shrink-0" />
                 <div className="w-px h-5 bg-yellow-500/40" />
@@ -174,8 +172,6 @@ export function MessageInput() {
                 </div>
               </button>
             </div>
-
-            {/* Unlock Row */}
             <div className="flex items-center justify-between mt-2 bg-[#2a2a2a] rounded-lg px-2.5 py-2">
               <div className="flex items-center gap-1.5">
                 <Crown className="w-4 h-4 text-white/50" />

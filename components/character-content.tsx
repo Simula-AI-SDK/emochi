@@ -22,16 +22,19 @@ export function CharacterContent() {
         </div>
         <div className="text-sm leading-relaxed space-y-3">
           <p className="text-white/50 italic">
-            {"You enter the bathroom and find Emilia brushing her teeth, still half asleep."}
+            {"You wake up on a Saturday and enter the bathroom to find Emilia brushing her teeth, still half asleep."}
           </p>
           <p className="text-white">
             {"Emilia: bohnm... Dhuia."}
           </p>
           <p className="text-white/50 italic">
-            {"She spits out the toothpaste and says it better"}
+            {"She spits out the toothpaste and says it better."}
           </p>
           <p className="text-white">
             {"Emilia: Good morning!."}
+          </p>
+          <p className="text-white/50 italic">
+            {"She goes back to brushing her teeth, glancing at you through the mirror with a little wave."}
           </p>
         </div>
       </div>

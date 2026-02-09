@@ -1,9 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { createPortal } from "react-dom"
 import { Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles, UserPlus, ChevronRight, MessageCircle, Video } from "lucide-react"
-import { MiniGameMenu } from "@simula/ads"
+
 
 const CHARACTER = {
   name: "Anna",
@@ -24,9 +25,9 @@ const chaiGameTheme = {
 }
 
 export function MessageInput() {
+  const router = useRouter()
   const [showSuggestions, setShowSuggestions] = useState(false)
   const [showShorts, setShowShorts] = useState(false)
-  const [showGames, setShowGames] = useState(false)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -65,20 +66,6 @@ export function MessageInput() {
     <>
       {/* Shorts Fullscreen Modal - rendered via portal to document.body */}
       {mounted && showShorts && createPortal(<ShortsModal />, document.body)}
-
-      {/* Mini Game Menu */}
-      <MiniGameMenu
-        isOpen={showGames}
-        onClose={() => setShowGames(false)}
-        charName={CHARACTER.name}
-        charID={CHARACTER.id}
-        charImage={CHARACTER.image}
-        charDesc={CHARACTER.description}
-        messages={simulaMessages}
-        maxGamesToShow={6}
-        delegateChar={true}
-        theme={chaiGameTheme}
-      />
 
       <div className="flex flex-col">
         {/* Character Info Row */}
@@ -130,7 +117,7 @@ export function MessageInput() {
           </button>
           <button 
             className="flex flex-col items-center gap-1"
-            onClick={() => setShowGames(true)}
+            onClick={() => router.push("/games")}
           >
             <Gamepad2 className="w-5 h-5 text-white/50" />
             <span className="text-white/50 text-[10px]">Games</span>

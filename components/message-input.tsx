@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
-import { Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles, UserPlus, ChevronRight } from "lucide-react"
+import { Pencil, Settings, Crown, Gamepad2, Play, X, Sparkles, UserPlus, ChevronRight, MessageCircle, Video } from "lucide-react"
 import { MiniGameMenu } from "@simula/ads"
 
 const CHARACTER = {
@@ -81,24 +81,6 @@ export function MessageInput() {
       />
 
       <div className="flex flex-col">
-        {/* Action Buttons */}
-        <div className="flex items-center gap-2 px-3 py-2">
-          <button 
-            onClick={() => setShowGames(true)}
-            className="flex-1 flex items-center justify-center gap-2 bg-[#3A3A3A] hover:bg-[#4a4a4a] transition-colors rounded-full px-4 py-2"
-          >
-            <Gamepad2 className="w-4 h-4 text-white/70" />
-            <span className="text-white text-sm">Play Games</span>
-          </button>
-          <button 
-            onClick={() => setShowShorts(true)}
-            className="flex-1 flex items-center justify-center gap-2 bg-[#3A3A3A] hover:bg-[#4a4a4a] transition-colors rounded-full px-4 py-2"
-          >
-            <Play className="w-4 h-4 text-white/70 fill-white/70" />
-            <span className="text-white text-sm">Watch Shorts</span>
-          </button>
-        </div>
-
         {/* Character Info Row */}
         <div className="flex items-center justify-between px-3 py-2">
           <div className="flex flex-col">
@@ -138,6 +120,28 @@ export function MessageInput() {
               </svg>
             </button>
           </div>
+        </div>
+
+        {/* Footer Navigation */}
+        <div className="flex items-center justify-around px-6 py-2.5">
+          <button className="flex flex-col items-center gap-1">
+            <MessageCircle className="w-5 h-5 text-white" />
+            <span className="text-white text-[10px]">Chat</span>
+          </button>
+          <button 
+            className="flex flex-col items-center gap-1"
+            onClick={() => setShowGames(true)}
+          >
+            <Gamepad2 className="w-5 h-5 text-white/50" />
+            <span className="text-white/50 text-[10px]">Games</span>
+          </button>
+          <button 
+            className="flex flex-col items-center gap-1"
+            onClick={() => setShowShorts(true)}
+          >
+            <Video className="w-5 h-5 text-white/50" />
+            <span className="text-white/50 text-[10px]">Shorts</span>
+          </button>
         </div>
 
         {/* Suggestions Panel */}
